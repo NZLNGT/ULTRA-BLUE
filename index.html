@@ -1,51 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NGT ULTRA LITHIUM BLUE GREASE – premium high-temperature, high-performance lithium-based grease available in 1KG, 3KG, and 15KG, offering protection up to 250°C.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NGT ULTRA LITHIUM BLUE GREASE – premium high-temperature, high-performance grease available in 1KG, 3KG, and 15KG, offering protection up to 250°C." />
   <title>NGT - ULTRA LITHIUM BLUE GREASE</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X13Q1ELX18"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-X13Q1ELX18');
   </script>
 
-  <!-- Product Structured Data (SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "NGT ULTRA LITHIUM BLUE GREASE",
-    "image": "blue_grease.png",
-    "description": "High-performance lithium-based grease offering superior lubrication, corrosion resistance, and protection up to 250°C.",
-    "brand": {
-      "@type": "Brand",
-      "name": "NGT"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "AED",
-      "lowPrice": "25",
-      "highPrice": "180"
-    }
-  }
-  </script>
-
-  <!-- Open Graph (Social Sharing) -->
-  <meta property="og:title" content="NGT ULTRA LITHIUM BLUE GREASE">
-  <meta property="og:description" content="High-performance lithium-based grease engineered for extreme durability and temperature resistance up to 250°C.">
-  <meta property="og:image" content="blue_grease.png">
-  <meta property="og:url" content="https://www.ngtdubaillc.com">
-  <meta property="og:type" content="product">
-
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,fr',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <style>
     body {
@@ -53,15 +36,54 @@
       background: linear-gradient(to bottom, #ffffff 0%, #e6f3ff 100%);
       margin: 0;
       padding: 0;
-      color: #002244;
+      color: #003366;
+      position: relative;
+    }
+
+    /* Translate Button */
+    .translate-container {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .translate-btn {
+      background-color: #003366;
+      color: #ffffff;
+      border: none;
+      border-radius: 25px;
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .translate-btn:hover {
+      background-color: #007acc;
+    }
+
+    #google_translate_element {
+      display: none;
+    }
+
+    .goog-te-banner-frame.skiptranslate,
+    .goog-te-gadget-icon {
+      display: none !important;
+    }
+
+    body > .skiptranslate {
+      display: none !important;
     }
 
     header {
       background-color: #add8e6;
-      color: #002244;
+      color: #003366;
       padding: 40px 20px;
       text-align: center;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
     }
 
     header img {
@@ -106,11 +128,6 @@
       background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease;
-    }
-
-    .container:hover {
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     }
 
     .product-image {
@@ -124,18 +141,48 @@
       border-radius: 8px;
     }
 
+    /* Availability Section */
     .availability-box {
       background-color: #e6f3ff;
       border: 2px solid #007acc;
-      border-radius: 8px;
-      padding: 15px 20px;
-      margin: 25px 0;
+      border-radius: 10px;
+      padding: 25px 20px;
+      margin: 30px 0;
       text-align: center;
-      font-size: 18px;
-      font-weight: 600;
-      color: #003366;
     }
 
+    .availability-box h3 {
+      color: #003366;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .pack-sizes {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .pack-sizes span {
+      background-color: #003366;
+      color: #ffffff;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .pack-sizes span:hover {
+      background-color: #007acc;
+      transform: translateY(-2px);
+    }
+
+    /* Product Info */
     .product-info {
       margin-top: 30px;
       text-align: left;
@@ -158,6 +205,43 @@
       margin: 10px 0;
     }
 
+    /* Technical Specifications */
+    .specs-box {
+      background: linear-gradient(135deg, #002b5e, #003f88);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 25px 30px;
+      margin-top: 40px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .specs-box h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .specs-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 10px 0;
+    }
+
+    .specs-row:last-child {
+      border-bottom: none;
+    }
+
+    .specs-label {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .specs-value {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
     footer {
       background-color: #003366;
       color: #ffffff;
@@ -175,25 +259,34 @@
         font-size: 16px;
         padding: 12px 25px;
       }
-      .container {
-        margin: 30px 10px;
-        padding: 20px;
-      }
-      .product-info {
-        font-size: 16px;
-      }
       .availability-box {
-        font-size: 16px;
-        padding: 12px 15px;
+        padding: 20px 15px;
+      }
+      .pack-sizes span {
+        padding: 8px 20px;
+        font-size: 15px;
+      }
+      .specs-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .specs-value {
+        margin-top: 5px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Translate Button -->
+  <div class="translate-container">
+    <button class="translate-btn" onclick="toggleTranslate()">🌐 Translate / Traduire</button>
+    <div id="google_translate_element"></div>
+  </div>
+
   <!-- Header -->
   <header>
-    <img src="ngt_logo_hi_res.png" alt="NGT Logo - NGT ULTRA LITHIUM BLUE GREASE">
+    <img src="ngt_logo_hi_res.png" alt="NGT Logo" />
     <h1>NGT - ULTRA LITHIUM BLUE GREASE</h1>
     <a href="https://www.ngtdubaillc.com/?utm_source=github&utm_medium=blue_grease&utm_campaign=qr_code"
        target="_blank"
@@ -204,35 +297,59 @@
   </header>
 
   <!-- Main Content -->
-  <main class="container">
+  <div class="container">
     <div class="product-image">
-      <img src="blue_grease.png" alt="NGT Ultra Lithium Blue Grease – high-performance lithium-based lubricant" loading="lazy">
+      <img src="blue_grease.png" alt="NGT Ultra Lithium Blue Grease Product" />
     </div>
 
     <!-- Availability Info Box -->
     <div class="availability-box">
-      Available in <strong>1KG</strong>, <strong>3KG</strong>, and <strong>15KG</strong>
+      <h3>Available Pack Sizes:</h3>
+      <div class="pack-sizes">
+        <span>1KG</span>
+        <span>3KG</span>
+        <span>15KG</span>
+      </div>
     </div>
 
     <div class="product-info">
-      <h2>Premium High-Performance Lithium Grease</h2>
+      <p><strong>NGT ULTRA LITHIUM BLUE GREASE</strong> is a next-generation, high-performance lithium-based grease engineered for superior lubrication and protection under extreme conditions. With its advanced additive technology, it offers unmatched durability, corrosion resistance, and stability — even in high-load, high-temperature, and wet environments.</p>
 
-      <p><strong>NGT ULTRA LITHIUM BLUE GREASE</strong> is a next-generation, high-performance lithium-based grease engineered for superior lubrication and protection under extreme conditions. With advanced additive technology, it delivers unmatched durability, corrosion resistance, and stability — even in high-load, high-temperature, and wet environments.</p>
+      <p>This ultra-grade formulation ensures long-lasting lubrication and performance consistency for a wide range of industrial and automotive applications.</p>
 
-      <p>This ultra-grade formulation ensures long-lasting lubrication and consistent performance across industrial and automotive applications.</p>
-
-      <h3>Key Features & Benefits</h3>
+      <p><strong>Key Features & Benefits:</strong></p>
       <ul>
-        <li><strong>High Temperature Tolerance:</strong> Reliable up to <strong>250°C (482°F)</strong> with outstanding drop-point stability.</li>
+        <li><strong>High Temperature Tolerance:</strong> Performs reliably up to <strong>250°C (482°F)</strong> with outstanding drop-point stability.</li>
         <li><strong>Exceptional Anti-Wear Protection:</strong> Reduces friction and prevents metal-to-metal contact for extended equipment life.</li>
-        <li><strong>Water & Corrosion Resistant:</strong> Provides excellent rust protection and resists washout in humid or wet conditions.</li>
+        <li><strong>Water and Corrosion Resistant:</strong> Provides excellent rust protection and resists washout in humid or wet conditions.</li>
         <li><strong>Extended Service Life:</strong> Reduces relubrication frequency and maintenance downtime.</li>
         <li><strong>Universal Application:</strong> Ideal for wheel bearings, marine equipment, heavy machinery, and industrial tools.</li>
       </ul>
 
+      <!-- Technical Specifications -->
+      <div class="specs-box">
+        <h3>Technical Specifications</h3>
+        <div class="specs-row">
+          <div class="specs-label">NLGI Grade</div>
+          <div class="specs-value">MP3</div>
+        </div>
+        <div class="specs-row">
+          <div class="specs-label">Base</div>
+          <div class="specs-value">Lithium</div>
+        </div>
+        <div class="specs-row">
+          <div class="specs-label">Dropping Point</div>
+          <div class="specs-value">180°C+</div>
+        </div>
+        <div class="specs-row">
+          <div class="specs-label">Operating Temp</div>
+          <div class="specs-value">-20°C to 130°C</div>
+        </div>
+      </div>
+
       <p><strong>Built for Performance –</strong> NGT ULTRA LITHIUM BLUE GREASE guarantees dependable performance and protection where others fail, keeping your machinery running smoothly in every condition.</p>
     </div>
-  </main>
+  </div>
 
   <!-- Footer -->
   <footer>
