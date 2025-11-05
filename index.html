@@ -1,52 +1,294 @@
-<!-- Translate Button (Header inline) -->
-<div class="translate-container">
-  <button class="translate-btn" onclick="toggleTranslate()">🌐 Translate / Traduire</button>
-  <div id="google_translate_element" style="display:none;"></div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NGT ULTRA LITHIUM BLUE GREASE – premium high-temperature, high-performance grease available in 1KG, 3KG, and 15KG, offering protection up to 250°C." />
+  <title>NGT - ULTRA LITHIUM BLUE GREASE</title>
 
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,fr',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X13Q1ELX18"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-X13Q1ELX18');
+  </script>
 
-    // Auto-detect browser language
-    const userLang = navigator.language || navigator.userLanguage;
-    if(userLang.startsWith('fr')){
-      setTimeout(() => {
-        const select = document.querySelector('#google_translate_element select');
-        if(select) select.value = 'fr';
-        select.dispatchEvent(new Event('change'));
-      }, 500);
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,fr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+
+      // Auto-detect browser language
+      const userLang = navigator.language || navigator.userLanguage;
+      if(userLang.startsWith('fr')){
+        setTimeout(() => {
+          const select = document.querySelector('#google_translate_element select');
+          if(select) {
+            select.value = 'fr';
+            select.dispatchEvent(new Event('change'));
+          }
+        }, 500);
+      }
     }
-  }
 
-  function toggleTranslate() {
-    var elem = document.getElementById('google_translate_element');
-    if (elem.style.display === 'none' || elem.style.display === '') {
-      elem.style.display = 'inline-block';
-    } else {
-      elem.style.display = 'none';
+    function toggleTranslate() {
+      var elem = document.getElementById('google_translate_element');
+      if (elem.style.display === 'none' || elem.style.display === '') {
+        elem.style.display = 'inline-block';
+      } else {
+        elem.style.display = 'none';
+      }
     }
-  }
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<style>
-  /* Make translate widget inline next to button */
-  #google_translate_element {
-    display: none;
-    margin-left: 10px;
-    vertical-align: middle;
-  }
-  .translate-container {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-  }
-</style>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #ffffff 0%, #e6f3ff 100%);
+      margin: 0;
+      padding: 0;
+      color: #003366;
+    }
+
+    header {
+      background-color: #add8e6;
+      color: #003366;
+      text-align: center;
+      padding: 30px 20px 40px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    header img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* Buttons Container */
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .cta-button, .translate-btn {
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cta-button {
+      background-color: #ffffff;
+      color: #003366;
+      text-decoration: none;
+      border: 2px solid #ffffff;
+    }
+
+    .cta-button:hover {
+      background-color: #003366;
+      color: #ffffff;
+    }
+
+    .translate-btn {
+      background-color: #003366;
+      color: #ffffff;
+    }
+
+    .translate-btn:hover {
+      background-color: #007acc;
+    }
+
+    #google_translate_element {
+      display: none;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-image {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .product-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .availability-box {
+      background-color: #e6f3ff;
+      border: 2px solid #007acc;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .availability-box h3 {
+      color: #003366;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .pack-sizes {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .pack-sizes span {
+      background-color: #003366;
+      color: #ffffff;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .pack-sizes span:hover {
+      background-color: #007acc;
+      transform: translateY(-2px);
+    }
+
+    .product-info {
+      margin-top: 25px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .product-info strong {
+      color: #007acc;
+    }
+
+    .product-info ul {
+      list-style-type: disc;
+      padding-left: 25px;
+      margin-top: 10px;
+    }
+
+    .product-info ul li {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    footer {
+      background-color: #003366;
+      color: #ffffff;
+      text-align: center;
+      padding: 12px 20px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 26px;
+      }
+      header img {
+        width: 80px;
+      }
+      .cta-button, .translate-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        height: 40px;
+      }
+      .container {
+        margin: 25px 15px;
+        padding: 20px;
+      }
+      .buttons-container {
+        flex-direction: column;
+      }
+      #google_translate_element {
+        margin-left: 0;
+        margin-top: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="ngt_logo_hi_res.png" alt="NGT Logo" />
+    <h1>NGT - ULTRA LITHIUM BLUE GREASE</h1>
+
+    <div class="buttons-container">
+      <a href="https://www.ngtdubaillc.com/?utm_source=github&utm_medium=blue_grease&utm_campaign=qr_code" target="_blank" class="cta-button" rel="noopener noreferrer">
+        Learn More
+      </a>
+      <button class="translate-btn" onclick="toggleTranslate()">🌐 Translate / Traduire</button>
+      <div id="google_translate_element"></div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="product-image">
+      <img src="blue_grease.png" alt="NGT Ultra Lithium Blue Grease Product" />
+    </div>
+
+    <div class="availability-box">
+      <h3>Available Pack Sizes:</h3>
+      <div class="pack-sizes">
+        <span>1KG</span>
+        <span>3KG</span>
+        <span>15KG</span>
+      </div>
+    </div>
+
+    <div class="product-info">
+      <p><strong>NGT ULTRA LITHIUM BLUE GREASE</strong> is a next-generation, high-performance lithium-based grease engineered for superior lubrication and protection under extreme conditions. With its advanced additive technology, it offers unmatched durability, corrosion resistance, and stability — even in high-load, high-temperature, and wet environments.</p>
+
+      <p>This ultra-grade formulation ensures long-lasting lubrication and performance consistency for a wide range of industrial and automotive applications.</p>
+
+      <p><strong>Key Features & Benefits:</strong></p>
+      <ul>
+        <li><strong>High Temperature Tolerance:</strong> Performs reliably up to <strong>250°C (482°F)</strong> with outstanding drop-point stability.</li>
+        <li><strong>Exceptional Anti-Wear Protection:</strong> Reduces friction and prevents metal-to-metal contact for extended equipment life.</li>
+        <li><strong>Water and Corrosion Resistant:</strong> Provides excellent rust protection and resists washout in humid or wet conditions.</li>
+        <li><strong>Extended Service Life:</strong> Reduces relubrication frequency and maintenance downtime.</li>
+        <li><strong>Universal Application:</strong> Ideal for wheel bearings, marine equipment, heavy machinery, and industrial
